@@ -2,6 +2,7 @@
 #include "GameToolbox.h"
 #include "MenuLayer.h"
 #include "CocosExplorer.h"
+#include "GameManager.h"
 
 #include <array>
 
@@ -48,7 +49,8 @@ Scene* LoadingLayer::scene() {
 
 bool LoadingLayer::init() {
     if (!Layer::init()) return false;
-    
+
+    GameManager::getInstance()->setDefaults();
     
     size_t totalAssets = fonts.size() + plists.size() + pngs.size();
     this->m_nTotalAssets = static_cast<int>(totalAssets);

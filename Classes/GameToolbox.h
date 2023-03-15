@@ -2,6 +2,7 @@
 #include <axmol.h>
 #include <string>
 #include <fmt/chrono.h>
+#include <vector>
 
 //general purpose class for helper functions that can be useful with any class at any moment
 namespace GameToolbox
@@ -11,6 +12,21 @@ namespace GameToolbox
         Low = 0,
         Medium,
         High
+    };
+
+    const std::vector<ax::Color3B> iconColors = {
+        {125, 255, 0},
+        {0, 255, 0},
+        {0, 255, 125},
+        {0, 255, 255},
+        {0, 125, 255},
+        {0, 0, 255},
+        {125, 0, 255},
+        {255, 0, 255},
+        {255, 0, 125},
+        {255, 0, 0},
+        {255, 125, 0},
+        {255, 255, 0}
     };
     
     int randomInt(int min, int max);

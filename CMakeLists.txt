@@ -178,6 +178,7 @@ endif()
 target_include_directories(${APP_NAME}
 		PRIVATE Classes
 		PRIVATE ${_AX_ROOT_PATH}/core/audio
+		PRIVATE json/single_include
 )
 
 target_compile_options(${APP_NAME} PRIVATE -w)

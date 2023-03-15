@@ -1,7 +1,7 @@
 #include "MenuLayer.h"
-/*
+
 #include "GarageLayer.h"
-*/
+
 
 #include "MenuGameLayer.h"
 #include "CreatorLayer.h"
@@ -56,7 +56,7 @@ bool MenuLayer::init(){
     static_cast<ax::Sprite*>(playBtn->getSprite())->setStretchEnabled(false);
     
     auto garageBtn = MenuItemSpriteExtra::create("GJ_garageBtn_001.png", [&](Node* btn) {
-        //Director::getInstance()->replaceScene(TransitionFade::create(0.5f, GarageLayer::scene()));
+        Director::getInstance()->replaceScene(TransitionFade::create(0.5f, GarageLayer::scene()));
     });
 
     garageBtn->setPosition({-110, 0});
